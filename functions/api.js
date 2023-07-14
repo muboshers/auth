@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const serverless = require("serverless-http");
 
 const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
@@ -90,3 +91,4 @@ app.use(
 );
 
 app.listen(PORT, () => console.log(`Server has running : ${PORT}`));
+module.exports = serverless(app);

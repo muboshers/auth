@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    />
+    <title>Email Template</title>
+    <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+    />
+    <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+    />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+    />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9fafb;
+            padding: 32px;
+        }
+
+        .body__wrapper {
+            padding: 24px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .logo {
+            width: 120px;
+            object-fit: contain;
+        }
+
+        .customer__name {
+            font-size: 36px;
+            line-height: 44px;
+            margin-top: 22px;
+            color: #0c111d;
+        }
+
+        .customer__message {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            max-width: 578px;
+            color: #344054;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="body__wrapper">
+    <table>
+        <tbody>
+        <tr>
+            <td>
+                <h4 class="customer__name">Hi {{name}}</h4>
+            </td>
+        </tr>
+        {{#each message}}
+            <tr>
+                <td>
+                    <p class="customer__message">
+                        {{this}}
+                    </p>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -22,6 +22,8 @@ app.use(
   })
 );
 
+//why
+
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
